@@ -127,16 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Achievements.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="NoCommand.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="Subject.cpp" />
     <ClCompile Include="Unit.cpp" />
     <ClCompile Include="Week1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Achievements.h" />
     <ClInclude Include="BaseCommand.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandMoveUnit.h" />
     <ClInclude Include="NoCommand.h" />
+    <ClInclude Include="Obesrver.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="Subject.h" />
     <ClInclude Include="Unit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
