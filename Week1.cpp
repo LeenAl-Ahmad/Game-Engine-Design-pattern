@@ -3,23 +3,19 @@
 
 #include <iostream>
 
-#include "Unit.h"
-#include "Physics.h"
-#include "Achievements.h"
+#include "Robots.h"
 
 int main()
 {
-    Achievements* ach = new Achievements();
-    Unit* unit = new Unit();
+    InheritanceRobot* ir = new InheritanceRobot();
+    std::cout << "Inheritance Robot\n";
+    ir->Grab();
+    ir->Walk();
 
-    Physics::Instance().GetEventFalling()->AddObserver(ach);
-    unit->MoveTo(0, 1);
-    unit->MoveTo(0, 0);
-    unit->MoveTo(0, -1);
-    Physics::Instance().Update(unit);
-
-    delete unit;
-    delete ach;
+    CompositionRobot* cr = new CompositionRobot();
+    std::cout << "\nComposition Robot\n";
+    cr->Grab();
+    cr->Walk();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
