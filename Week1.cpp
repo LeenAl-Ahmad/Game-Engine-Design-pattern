@@ -3,19 +3,22 @@
 
 #include <iostream>
 
-#include "Robots.h"
+#include "Unit.h"
 
 int main()
 {
-    InheritanceRobot* ir = new InheritanceRobot();
-    std::cout << "Inheritance Robot\n";
-    ir->Grab();
-    ir->Walk();
+    Unit* unit = new Unit();
 
-    CompositionRobot* cr = new CompositionRobot();
-    std::cout << "\nComposition Robot\n";
-    cr->Grab();
-    cr->Walk();
+    float count = 0.0f;
+    while (count < 10)
+    {
+        unit->Update();
+        unit->MoveTo((int)count, 10);
+        std::cout << unit->GetCache().str() << "\n";
+        count += 0.333f;
+    };
+
+    delete unit;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
