@@ -12,6 +12,10 @@ int main()
     cd->HandleInput("Y");
     cd->HandleInput("A");
     cd->HandleInput("B");
+    cd->Undo();
+    cd->Undo();
+    cd->Undo();
+    cd->Undo();
     delete cd;
 }
 

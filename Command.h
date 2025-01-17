@@ -1,7 +1,10 @@
 #pragma once
 #include<string>
+#include <vector>
 
-class BaseCommand;
+#include "BaseCommand.h"
+
+class Unit;
 
 class Command
 {
@@ -9,10 +12,10 @@ public:
 	Command();
 	~Command();
 	void HandleInput(std::string _b);
+	void Undo();
+
 private:
-	BaseCommand* m_comJump;
-	BaseCommand* m_comFire;
-	BaseCommand* m_comSwap;
-	BaseCommand* m_comLurch;
+	std::vector<BaseCommand*> m_commands;
+	Unit* m_unit;
 };
 
