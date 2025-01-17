@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+
 #include "Unit.h"
 #include "Physics.h"
 #include "Achievements.h"
@@ -9,19 +10,15 @@
 int main()
 {
     Achievements* ach = new Achievements();
-    Physics* Phy = new Physics();
     Unit* unit = new Unit();
 
-    Phy->GetEventFalling()->AddObserver(ach);
+    Physics::Instance().GetEventFalling()->AddObserver(ach);
     unit->MoveTo(0, 1);
-    Phy->Update(unit);
     unit->MoveTo(0, 0);
-    Phy->Update(unit);
     unit->MoveTo(0, -1);
-    Phy->Update(unit);
+    Physics::Instance().Update(unit);
 
     delete unit;
-    delete Phy;
     delete ach;
 }
 
