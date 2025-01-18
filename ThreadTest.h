@@ -12,7 +12,7 @@ public:
 	void operator()();
 private:
 	static void StaticThreadFunction();
-	void InstanceeFunction();
+	void InstanceFunction();
 
 	std::thread m_thread;
 };
