@@ -132,6 +132,7 @@
     <ClCompile Include="NoCommand.cpp" />
     <ClCompile Include="Physics.cpp" />
     <ClCompile Include="Subject.cpp" />
+    <ClCompile Include="ThreadTest.cpp" />
     <ClCompile Include="Unit.cpp" />
     <ClCompile Include="Week1.cpp" />
   </ItemGroup>
@@ -142,10 +143,13 @@
     <ClInclude Include="CommandMoveUnit.h" />
     <ClInclude Include="NoCommand.h" />
     <ClInclude Include="Obesrver.h" />
+    <ClInclude Include="ObjPool.h" />
     <ClInclude Include="Physics.h" />
+    <ClInclude Include="Resource.h" />
     <ClInclude Include="Robots.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="Subject.h" />
+    <ClInclude Include="ThreadTest.h" />
     <ClInclude Include="Unit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

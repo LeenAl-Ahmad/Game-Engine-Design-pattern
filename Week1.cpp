@@ -3,22 +3,13 @@
 
 #include <iostream>
 
-#include "Unit.h"
+#include "ThreadTest.h"
 
 int main()
 {
-    Unit* unit = new Unit();
-
-    float count = 0.0f;
-    while (count < 10)
-    {
-        unit->Update();
-        unit->MoveTo((int)count, 10);
-        std::cout << unit->GetCache().str() << "\n";
-        count += 0.333f;
-    };
-
-    delete unit;
+    ThreadTest* ttest = new ThreadTest();
+    ttest->TestStaticFunctionPointer();
+    delete ttest;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
