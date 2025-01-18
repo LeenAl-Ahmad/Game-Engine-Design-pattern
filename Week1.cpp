@@ -8,7 +8,7 @@
 int main()
 {
     ThreadTest* ttest = new ThreadTest();
-    ttest->TestFunctionObj();
+    ttest->TestLambdaFunction();
     delete ttest;
 }
 
